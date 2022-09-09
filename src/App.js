@@ -7,8 +7,9 @@ import Projects from "./Projects";
 
 function App() {
   const [navOpen, setNavOpen] = useState(false);
+
   useEffect(() => {
-    if (navOpen === true) {
+    if (navOpen) {
       document.querySelector(".nav-projects").style.display = "block";
       document.querySelector(".nav-contact").style.display = "block";
       document.querySelector(".nav-mode").style.display = "block";
@@ -22,6 +23,7 @@ function App() {
   const onNavClick = () => {
     setNavOpen(!navOpen);
   };
+
   return (
     <div className="App">
       <Header onNavClick={onNavClick} />

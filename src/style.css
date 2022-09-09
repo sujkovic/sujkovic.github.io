@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap");
 * {
   padding: 0;
   margin: 0;
   --background-dark: #2c2c38;
   --header-dark: #2e2e35ea;
+  --nav-dark: #2e2e351e;
   --font-light: #ffffff;
 }
 
@@ -38,28 +39,71 @@ header {
   font-size: 1.3rem;
   letter-spacing: 0.7px;
   backdrop-filter: blur(6px);
+  background-color: var(--header-dark);
+}
+
+.header-name-wrapper {
+  font-family: "Ms Madi", sans-serif;
+  font-size: 2rem;
+}
+
+.header-name-wrapper:hover {
+  cursor: pointer;
+}
+
+.nav-mode-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  gap: 32px;
 }
 
 nav {
-  align-self: flex-start;
-  overflow-y: visible;
-  flex-wrap: wrap;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
+  gap: 32px;
 }
 
-.nav-child {
-  height: 48px;
-  width: 150px;
-  text-align: center;
-  padding-top: 24px;
-}
-
-.nav-child:not(.menu) {
+.nav-child:not(.nav-main) {
   display: none;
-  background-color: var(--header-dark);
+}
+
+.nav-main {
+  filter: invert(84%) sepia(5%) saturate(0%) hue-rotate(169deg) brightness(97%)
+    contrast(80%);
+}
+
+.nav-main:hover {
+  cursor: pointer;
+}
+
+.mode-wrapper {
+  align-self: center;
+  padding-top: 6px;
+}
+
+.dark-mode-icon:hover,
+.light-mode-icon:hover {
+  cursor: pointer;
+}
+
+.dark-mode-icon {
+  animation: icon-blur 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  filter: invert(67%) sepia(55%) saturate(1879%) hue-rotate(216deg)
+    brightness(82%) contrast(90%);
+}
+
+.light-mode-icon {
+  animation: icon-blur 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  filter: invert(94%) sepia(85%) saturate(642%) hue-rotate(10deg)
+    brightness(106%) contrast(101%);
+}
+
+.icon-animation {
+  animation: icon-blur 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 /*    SWITCH MODE   */
@@ -80,7 +124,7 @@ nav {
   height: 100vh;
 }
 .landingpage-title {
-  font-size: 130px;
+  font-size: 7rem;
   animation: title-animation 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   color: white;
 }
@@ -116,4 +160,23 @@ nav {
     filter: blur(0px);
     opacity: 1;
   }
+}
+
+@keyframes icon-blur {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*          IMAGES          */
+
+.icon {
+  height: 36px;
 }
