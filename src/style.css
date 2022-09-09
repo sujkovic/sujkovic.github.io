@@ -1,27 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+  --background-dark: #2e2e35;
+  --header-dark: #2e2e35;
+  --font-light: #ffffff;
 }
 
 html {
-    font-size: 16px;
-    font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
 }
 
 .App {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 300vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-dark);
+  color: var(--font-light);
 }
 
-.title {
-    font-size: 130px;
+/*          HEADER           */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 120px;
+  align-items: center;
+  height: 72px;
+  font-size: 1.3rem;
+  letter-spacing: 0.7px;
+  background-color: var(--header-dark);
 }
 
-.comingSoon {
-    font-size: 32px;
+/*          LANDING PAGE             */
+
+.LandingPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.landingpage-title {
+  font-size: 130px;
+  animation: title-animation 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  color: white;
+}
+
+.landingpage-subtitle {
+  font-size: 32px;
+  animation: title-animation 1.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+/*          ANIMATIONS            */
+
+@keyframes title-animation {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
 }

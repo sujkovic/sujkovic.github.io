@@ -1,10 +1,12 @@
-import './style.css';
+import "./style.css";
+import Header from "./Header";
+import LandingPage from "./LandingPage";
 
 function App() {
   return (
     <div className="App">
-      <div className='title'>Adrian Sujković</div>
-      <div className='comingSoon'>Website coming soon...</div>
+      <Header />
+      <LandingPage />
     </div>
   );
 }
