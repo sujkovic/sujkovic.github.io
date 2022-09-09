@@ -1,13 +1,17 @@
 import "./style.css";
 import Header from "./Header";
 import LandingPage from "./LandingPage";
+import About from "./About";
+import Projects from "./Projects";
 
 function App() {
   return (
-    <div className="App">
+    <body>
       <Header />
       <LandingPage />
-    </div>
+      <About />
+      <Projects />
+    </body>
   );
 }
 

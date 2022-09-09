@@ -3,18 +3,19 @@
 * {
   padding: 0;
   margin: 0;
-  --background-dark: #2e2e35;
-  --header-dark: #2e2e35;
+  --background-dark: #2c2c38;
+  --header-dark: #2e2e35ea;
   --font-light: #ffffff;
 }
 
 html {
   font-size: 16px;
   font-family: "Inter", sans-serif;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
 }
 
-.App {
-  height: 300vh;
+body {
   display: flex;
   flex-direction: column;
   background-color: var(--background-dark);
@@ -28,6 +29,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   padding: 0 120px;
@@ -35,12 +37,14 @@ header {
   height: 72px;
   font-size: 1.3rem;
   letter-spacing: 0.7px;
+  backdrop-filter: blur(6px);
   background-color: var(--header-dark);
 }
 
 /*          LANDING PAGE             */
 
 .LandingPage {
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,6 +60,21 @@ header {
 .landingpage-subtitle {
   font-size: 32px;
   animation: title-animation 1.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+/*          ABOUT            */
+
+.About {
+  scroll-snap-align: start;
+  height: 100vh;
+  background-color: lightgray;
+}
+
+/*          PROJECTS             */
+
+.Projects {
+  scroll-snap-align: start;
+  height: 100vh;
 }
 
 /*          ANIMATIONS            */
