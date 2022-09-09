@@ -15,7 +15,7 @@ html {
   overflow-y: auto;
 }
 
-body {
+.App {
   display: flex;
   flex-direction: column;
   background-color: var(--background-dark);
@@ -38,7 +38,35 @@ header {
   font-size: 1.3rem;
   letter-spacing: 0.7px;
   backdrop-filter: blur(6px);
+}
+
+nav {
+  align-self: flex-start;
+  overflow-y: visible;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-child {
+  height: 48px;
+  width: 150px;
+  text-align: center;
+  padding-top: 24px;
+}
+
+.nav-child:not(.menu) {
+  display: none;
   background-color: var(--header-dark);
+}
+
+/*    SWITCH MODE   */
+
+.switch-mode-wrapper {
+  display: flex;
+  align-items: center;
 }
 
 /*          LANDING PAGE             */
