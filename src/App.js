@@ -4,6 +4,7 @@ import Header from "./Header";
 import LandingPage from "./LandingPage";
 import About from "./About";
 import Projects from "./Projects";
+import Projects2 from "./Projects2";
 import Contact from "./Contact";
 
 function App() {
@@ -29,8 +30,8 @@ function App() {
     <div className="App">
       <Header onNavClick={onNavClick} />
       <LandingPage />
-      <About />
       <Projects />
+      <Projects2 />
       <Contact />
     </div>
   );

@@ -1,5 +1,3 @@
-import React from "react";
-
 const Project = ({ text, vid }) => {
   return (
     <div className="Project">
