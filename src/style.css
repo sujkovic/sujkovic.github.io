@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -7,11 +9,13 @@
   --header-dark: #2e2e35ea;
   --nav-dark: #2e2e351e;
   --font-light: #ffffff;
+  --font-gray: #c0c0c0;
+  --font-green: #37ff9e;
 }
 
 html {
   font-size: 16px;
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto Mono", monospace;
   scroll-snap-type: y mandatory;
   overflow-y: auto;
 }
@@ -36,15 +40,26 @@ header {
   padding: 0 120px;
   align-items: center;
   height: 72px;
-  font-size: 1.3rem;
+  font-size: 1rem;
   letter-spacing: 0.7px;
   backdrop-filter: blur(6px);
   background-color: var(--header-dark);
 }
 
 .header-name-wrapper {
-  font-family: "Ms Madi", sans-serif;
-  font-size: 2rem;
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: var(--font-gray);
+}
+
+.header-logo {
+  height: 32px;
+  width: 32px;
+  filter: invert(74%) sepia(63%) saturate(493%) hue-rotate(88deg)
+    brightness(104%) contrast(101%);
 }
 
 .header-name-wrapper:hover {
@@ -55,7 +70,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
   gap: 32px;
 }
 
@@ -65,6 +79,7 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 32px;
+  color: var(--font-gray);
 }
 
 .nav-child:not(.nav-main) {
@@ -72,6 +87,8 @@ nav {
 }
 
 .nav-main {
+  height: 45px;
+  width: 45px;
   filter: invert(84%) sepia(5%) saturate(0%) hue-rotate(169deg) brightness(97%)
     contrast(80%);
 }
@@ -82,7 +99,7 @@ nav {
 
 .mode-wrapper {
   align-self: center;
-  padding-top: 6px;
+  padding-top: 4px;
 }
 
 .dark-mode-icon:hover,
@@ -124,13 +141,14 @@ nav {
   height: 100vh;
 }
 .landingpage-title {
-  font-size: 7rem;
+  font-size: 5rem;
   animation: title-animation 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   color: white;
 }
 
 .landingpage-subtitle {
-  font-size: 32px;
+  font-size: 1.5rem;
+  color: var(--font-gray);
   animation: title-animation 1.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
@@ -147,6 +165,79 @@ nav {
 .Projects {
   scroll-snap-align: start;
   height: 100vh;
+}
+
+/*          CONTACT             */
+
+.Contact {
+  font-family: "Roboto Mono", monospace;
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  gap: 84px;
+  font-size: 3rem;
+  color: var(--font-light);
+}
+
+.contact-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  color: var(--font-gray);
+}
+
+.contact-icons {
+  display: flex;
+  gap: 115px;
+}
+
+.linked-in-icon {
+  height: 64px;
+  width: 75px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg)
+    brightness(103%) contrast(103%);
+}
+
+.github-icon {
+  height: 64px;
+  width: 64px;
+}
+
+.contact-email {
+  font-size: 2rem;
+}
+
+.contact-source-code {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--font-gray);
+}
+
+.contact-title {
+  width: 11ch;
+  animation: typing 2s steps(27), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 /*          ANIMATIONS            */

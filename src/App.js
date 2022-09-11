@@ -4,6 +4,7 @@ import Header from "./Header";
 import LandingPage from "./LandingPage";
 import About from "./About";
 import Projects from "./Projects";
+import Contact from "./Contact";
 
 function App() {
   const [navOpen, setNavOpen] = useState(false);
@@ -30,6 +31,7 @@ function App() {
       <LandingPage />
       <About />
       <Projects />
+      <Contact />
     </div>
   );
 }
