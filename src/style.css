@@ -5,8 +5,8 @@
 * {
   padding: 0;
   margin: 0;
-  --background-dark: #2c2c38;
-  --header-dark: #2e2e35ea;
+  --background-dark: #23232d;
+  --header-dark: rgba(37, 40, 42, 0.92);
   --nav-dark: #2e2e351e;
   --font-light: #ffffff;
   --font-gray: #c0c0c0;
@@ -156,7 +156,60 @@ nav {
 .About {
   scroll-snap-align: start;
   height: 100vh;
-  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.about-title {
+  font-size: 3.5rem;
+}
+
+.about-intro-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  font-size: 1.2rem;
+}
+
+.me {
+  height: 250px;
+  width: 250px;
+  border-radius: 100%;
+}
+
+.about-intro-text {
+  width: 800px;
+  color: var(--font-gray);
+}
+
+.about-categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 156px;
+  padding-top: 64px;
+  font-size: 1.4rem;
+}
+
+.about-languages-wrapper,
+.about-skills-wrapper,
+.about-spoken-languages-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.about-languages,
+.about-skills,
+.about-spoken-languages {
+  display: flex;
+  gap: 16px;
 }
 
 /*          PROJECTS             */
@@ -173,7 +226,7 @@ nav {
 }
 
 .projects-title {
-  margin-top: 36px;
+  padding-top: 64px;
   font-size: 3rem;
 }
 
@@ -184,6 +237,18 @@ nav {
   gap: 80px;
   color: var(--font-gray);
   font-size: 1.2rem;
+}
+
+.project-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-title {
+  color: var(--font-light);
+  font-size: 1.4rem;
+  text-align: center;
 }
 
 .project-text {

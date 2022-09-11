@@ -14,11 +14,11 @@ function App() {
     if (navOpen) {
       document.querySelector(".nav-projects").style.display = "block";
       document.querySelector(".nav-contact").style.display = "block";
-      document.querySelector(".nav-mode").style.display = "block";
+      document.querySelector(".nav-about").style.display = "block";
     } else {
       document.querySelector(".nav-projects").style.display = "none";
       document.querySelector(".nav-contact").style.display = "none";
-      document.querySelector(".nav-mode").style.display = "none";
+      document.querySelector(".nav-about").style.display = "none";
     }
   }, [navOpen]);
 
@@ -30,6 +30,7 @@ function App() {
     <div className="App">
       <Header onNavClick={onNavClick} />
       <LandingPage />
+      <About />
       <Projects />
       <Projects2 />
       <Contact />
