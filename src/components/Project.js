@@ -1,7 +1,7 @@
 const Project = ({ text, vid, link, title }) => {
   return (
     <div className="Project">
-      <div class="project-info-wrapper">
+      <div className="project-info-wrapper">
         <div className="project-title">{title}</div>
         <div className="project-text">{text}</div>
       </div>

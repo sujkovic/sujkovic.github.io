@@ -23,7 +23,7 @@ const About = () => {
         <img src={penguin} alt="Me" className="me"></img>
         <div className="about-intro-text">
           Hi I'm Adrian! I'm currently a junior at Binghamton University, NY,
-          pursuing a bachelors degree in computer science and mathematical
+          pursuing a dual bachelors degree in computer science and mathematical
           sciences with a focus on software development.
         </div>
       </div>

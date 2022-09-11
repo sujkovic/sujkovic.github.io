@@ -7,7 +7,7 @@ const Projects2 = () => {
     <div className="Projects2">
       <Project
         vid={leagueManager}
-        text="In my data structures and algorithms class, I was tasked with making a sports league managing software in C++. But there was a twist - the arrays had to be dynamic. The app compiles on linux machines with make"
+        text="In my data structures and algorithms class, I was tasked with making a sports league managing software in C++. But there was a twist - the arrays had to be dynamically allocated. The app also compiles on linux machines with make."
         link="https://github.com/sujkovic/sports-league-manager"
         title="Sports League Manager"
       />
@@ -23,7 +23,7 @@ const Projects2 = () => {
             className="project-video abstract"
           ></img>
         </a>
-        <div class="project-info-wrapper">
+        <div className="project-info-wrapper">
           <div className="project-title">Technical Research Paper</div>
           <div className="project-text">
             In my CS ethics class, I was given the task of writing a technical
