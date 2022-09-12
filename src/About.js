@@ -1,4 +1,4 @@
-import penguin from "./assets/penguin.png";
+import selfie from "./assets/selfie.png";
 import cIcon from "./assets/cIcon.png";
 import jsIcon from "./assets/jsIcon.png";
 import htmlIcon from "./assets/htmlIcon.png";
@@ -20,7 +20,7 @@ const About = () => {
     <div className="About">
       <div className="about-title">About me</div>
       <div className="about-intro-wrapper">
-        <img src={penguin} alt="Me" className="me"></img>
+        <img src={selfie} alt="Me" className="me"></img>
         <div className="about-intro-text">
           Hi I'm Adrian! I'm currently a junior at Binghamton University, NY,
           pursuing a dual bachelors degree in computer science and mathematical

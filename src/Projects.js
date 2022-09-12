@@ -9,7 +9,7 @@ const Projects = () => {
       <Project
         vid={resumeBuilder}
         text="While looking for internships I realized I was going to need to fix up my resume. I knew it would take a while so I figured, huh, let's see if flexbox can expedite the process. It didn't. But I learned react!"
-        link="https:/github.com/sujkovic/resume-maker"
+        link="https://github.com/sujkovic/resume-maker"
         title="Resume Builder"
       />
       <div className="Project">
