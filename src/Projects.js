@@ -12,7 +12,7 @@ const Projects = () => {
         link="https://github.com/sujkovic/resume-maker"
         title="Resume Builder"
       />
-      <div className="Project">
+      <div className="Project  reverse-project">
         <a
           target="_blank"
           rel="noopener noreferrer"

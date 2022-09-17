@@ -11,7 +11,7 @@ const Projects2 = () => {
         link="https://github.com/sujkovic/sports-league-manager"
         title="Sports League Manager"
       />
-      <div className="Project">
+      <div className="Project reverse-project">
         <a
           target="_blank"
           rel="noopener noreferrer"

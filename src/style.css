@@ -269,6 +269,10 @@ nav {
   width: 36px;
 }
 
+.about-courses-wrapper {
+  color: var(--font-gray);
+}
+
 /*          PROJECTS             */
 
 .Projects,
@@ -481,6 +485,7 @@ video {
 
   .About {
     height: 200vh;
+    justify-content: flex-start;
   }
   .about-intro-wrapper {
     flex-direction: column;
@@ -511,5 +516,56 @@ video {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  /*        Projects        */
+  .Projects {
+    padding-bottom: 50vh;
+    gap: 64px;
+  }
+  .Project {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .project-text {
+    width: 90vw;
+  }
+  video {
+    height: 200px;
+    width: 355px;
+  }
+  .abstract {
+    height: 200px;
+    width: 355px;
+  }
+  .reverse-project {
+    flex-direction: column-reverse;
+  }
+
+  .Projects2 {
+    padding-bottom: 20vh;
+  }
+  .contact-email {
+    font-size: 1.8rem;
+  }
+
+  /*        Contact       */
+
+  .contact-title {
+    font-size: 3rem;
+  }
+
+  /*      For super tiny phones     */
+
+  @media (max-height: 700px) {
+    .About {
+      height: 250vh;
+    }
+    .Projects {
+      padding-bottom: 80vh;
+    }
+    .Projects2 {
+      padding-bottom: 40vh;
+    }
   }
 }
