@@ -48,6 +48,7 @@ const About = () => {
           </div>
         </div>
         <div className="about-spoken-languages-wrapper">
+          {/*
           <div className="about-spoken-languages-title">Spoken Languages</div>
           <div className="about-spoken-languages">
             <div className="about-native-wrapper">
@@ -71,6 +72,24 @@ const About = () => {
                 <img src={russiaIcon} alt="Russian"></img>
               </div>
             </div>
+          </div>
+          */}
+          <div className="about-spoken-languages-title">Courses</div>
+          <div className="about-courses-wrapper">
+            <div className="about-course">Data Structures and Algorithms</div>
+            <div className="about-course">
+              Design and Analysis of Algorithms
+            </div>
+            <div className="about-course">Operating Systems</div>
+            <div className="about-course">
+              Architecture From a Programmer's Perspective
+            </div>
+            <div className="about-course">
+              Ethical, Social, and Global Issues in Computing
+            </div>
+            <div className="about-course">Linear Algebra</div>
+            <div className="about-course">Number Systems</div>
+            <div className="about-course">Automata Theory</div>
           </div>
         </div>
       </div>
