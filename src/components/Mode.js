@@ -1,14 +1,36 @@
 import React from "react";
-import { useState } from "react";
+import { useEffect } from "react";
+import useLocalStorage from "use-local-storage";
 import darkModeIcon from "../assets/darkModeIcon.png";
 import lightModeIcon from "../assets/lightModeIcon.png";
 
 const DarkMode = () => {
-  const [darkMode, setDarkMode] = useState(true);
+  const defaultLight = window.matchMedia(
+    "(prefers-color-scheme: light)"
+  ).matches;
+
+  const [theme, setTheme] = useLocalStorage(
+    "theme",
+    defaultLight ? "light" : "dark"
+  );
 
   const onModeClick = () => {
-    setDarkMode(!darkMode);
-    /*
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+  };
+
+  useEffect(() => {
+    if (theme === "light") {
+      document.documentElement.setAttribute("data-theme", "light");
+      document
+        .querySelector(".linked-in-icon")
+        .classList.toggle("linked-in-light");
+    } else {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  }, [theme]);
+
+  /*
     if (darkMode) {
       document
         .querySelector(".dark-mode-icon")
@@ -25,11 +47,9 @@ const DarkMode = () => {
         .classList.add("icon-animation");
     }
     */
-  };
-
   return (
     <>
-      {darkMode ? (
+      {theme === "light" ? (
         <img
           className="icon dark-mode-icon"
           src={darkModeIcon}

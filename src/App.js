@@ -56,3 +56,7 @@ function App() {
 }
 
 export default App;
+
+//  TODO:
+//  Add mobile menu and fix mobile (it aint workin bruh)
+//  Fix english and grammar

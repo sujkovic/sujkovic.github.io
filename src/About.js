@@ -37,16 +37,6 @@ const About = () => {
             <img src={cssIcon} alt="CSS"></img>
           </div>
         </div>
-        <div className="about-skills-wrapper">
-          <div className="about-skills-title">Skills</div>
-          <div className="about-skills">
-            <img src={reactIcon} alt="React"></img>
-            <img src={webpackIcon} alt="Webpack"></img>
-            <img src={gitIcon} alt="Git"></img>
-            <img src={bashIcon} alt="Bash"></img>
-            <img src={linuxIcon} alt="Linux"></img>
-          </div>
-        </div>
         <div className="about-spoken-languages-wrapper">
           {/*
           <div className="about-spoken-languages-title">Spoken Languages</div>
@@ -90,6 +80,16 @@ const About = () => {
             <div className="about-course">Linear Algebra</div>
             <div className="about-course">Number Systems</div>
             <div className="about-course">Automata Theory</div>
+          </div>
+        </div>
+        <div className="about-skills-wrapper">
+          <div className="about-skills-title">Skills</div>
+          <div className="about-skills">
+            <img src={reactIcon} alt="React"></img>
+            <img src={webpackIcon} alt="Webpack"></img>
+            <img src={gitIcon} alt="Git"></img>
+            <img src={bashIcon} alt="Bash"></img>
+            <img src={linuxIcon} alt="Linux"></img>
           </div>
         </div>
       </div>

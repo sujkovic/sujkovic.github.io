@@ -5,12 +5,30 @@
 * {
   padding: 0;
   margin: 0;
+}
+
+:root {
   --background-dark: #1c1c24;
   --header-dark: rgba(30, 32, 33, 0.92);
   --nav-dark: #2e2e351e;
   --font-light: #ffffff;
   --font-gray: #c0c0c0;
   --font-green: #37ff9e;
+}
+
+[data-theme="light"] {
+  --background-dark: #f0e7db;
+  --header-dark: rgba(248, 245, 238, 0.868);
+  --nav-dark: #f4ede4;
+  --font-light: #1a202c;
+  --font-gray: #626161;
+}
+[data-theme="dark"] {
+  --background-dark: #1c1c24;
+  --header-dark: rgba(30, 32, 33, 0.92);
+  --nav-dark: #2e2e351e;
+  --font-light: #ffffff;
+  --font-gray: #c0c0c0;
 }
 
 html {
@@ -144,7 +162,7 @@ nav {
   display: flex;
   font-size: 5rem;
   animation: title-animation 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  color: white;
+  color: var(--font-light);
 }
 
 .landingpage-subtitle {
@@ -213,9 +231,10 @@ nav {
 .about-categories {
   display: flex;
   align-items: baseline;
-  gap: 156px;
+  gap: 120px;
   padding-top: 64px;
   font-size: 1.4rem;
+  padding-left: 16px;
 }
 
 .about-languages-wrapper,
@@ -225,7 +244,7 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 30px;
 }
 
 .about-languages,
@@ -234,7 +253,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
 }
 
 .about-spoken-languages-wrapper {
@@ -252,7 +271,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   color: var(--font-gray);
 }
 
@@ -271,6 +290,16 @@ nav {
 
 .about-courses-wrapper {
   color: var(--font-gray);
+  text-align: center;
+  line-height: 24px;
+}
+
+.about-course {
+  font-size: 1rem;
+}
+
+.about-skills {
+  gap: 8px;
 }
 
 /*          PROJECTS             */
@@ -382,6 +411,11 @@ nav {
   border-right: 3px solid;
   font-family: monospace;
   font-size: 2em;
+}
+
+.linked-in-light {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg)
+    brightness(103%) contrast(103%);
 }
 
 @keyframes typing {
