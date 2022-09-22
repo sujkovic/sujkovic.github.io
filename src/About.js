@@ -1,4 +1,4 @@
-import selfie from "./assets/selfie.png";
+import penguin from "./assets/penguin.png";
 import cIcon from "./assets/cIcon.png";
 import jsIcon from "./assets/jsIcon.png";
 import htmlIcon from "./assets/htmlIcon.png";
@@ -8,19 +8,13 @@ import webpackIcon from "./assets/webpackIcon.png";
 import gitIcon from "./assets/gitIcon.png";
 import bashIcon from "./assets/bashIcon.png";
 import linuxIcon from "./assets/linuxIcon.png";
-import americaIcon from "./assets/americaIcon.png";
-import montenegroIcon from "./assets/montenegroIcon.png";
-import bosniaIcon from "./assets/bosniaIcon.png";
-import serbiaIcon from "./assets/serbiaIcon.png";
-import croatiaIcon from "./assets/croatiaIcon.png";
-import russiaIcon from "./assets/russiaIcon.png";
 
 const About = () => {
   return (
     <div className="About">
       <div className="about-title">About me</div>
       <div className="about-intro-wrapper">
-        <img src={selfie} alt="Me" className="me"></img>
+        <img src={penguin} alt="Me" className="me"></img>
         <div className="about-intro-text">
           Hi I'm Adrian! I'm currently a junior at Binghamton University, NY,
           pursuing a dual bachelors degree in computer science and mathematical
