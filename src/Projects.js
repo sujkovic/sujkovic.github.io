@@ -25,7 +25,7 @@ const Projects = () => {
         <div className="project-info-wrapper">
           <div className="project-title">Memory Game</div>
           <div className="project-text">
-            I made this app with the intentions of adding up my react
+            I made this app with the intentions of building up my react
             foundations and learning hooks. It worked really well and I got a
             cool little game out of it!
           </div>

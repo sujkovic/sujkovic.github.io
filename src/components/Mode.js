@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import useLocalStorage from "use-local-storage";
 import darkModeIcon from "../assets/darkModeIcon.png";
 import lightModeIcon from "../assets/lightModeIcon.png";
+import githubIcon from "../assets/githubIcon.png";
+import githubIconDark from "../assets/githubIconDark.png";
 
 const DarkMode = () => {
   const defaultLight = window.matchMedia(
@@ -22,11 +24,10 @@ const DarkMode = () => {
   useEffect(() => {
     if (theme === "light") {
       document.documentElement.setAttribute("data-theme", "light");
-      document
-        .querySelector(".linked-in-icon")
-        .classList.toggle("linked-in-light");
+      document.querySelector(".github-icon").src = githubIconDark;
     } else {
       document.documentElement.setAttribute("data-theme", "dark");
+      document.querySelector(".github-icon").src = githubIcon;
     }
   }, [theme]);
 

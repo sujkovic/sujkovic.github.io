@@ -21,7 +21,7 @@
   --header-dark: rgba(248, 245, 238, 0.868);
   --nav-dark: #f4ede4;
   --font-light: #1a202c;
-  --font-gray: #626161;
+  --font-gray: #110e0e;
 }
 [data-theme="dark"] {
   --background-dark: #1c1c24;
@@ -76,6 +76,7 @@ header {
 }
 
 .header-logo {
+  padding-top: 2px;
   height: 32px;
   width: 32px;
   filter: invert(74%) sepia(63%) saturate(493%) hue-rotate(88deg)
@@ -232,7 +233,7 @@ nav {
   display: flex;
   align-items: baseline;
   gap: 120px;
-  padding-top: 64px;
+  padding-top: 32px;
   font-size: 1.4rem;
   padding-left: 16px;
 }
@@ -499,6 +500,22 @@ video {
 @media (max-width: 768px) {
   html {
     scroll-snap-type: none;
+  }
+
+  /*        Nav         */
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 120px;
+    align-items: center;
+    height: 64px;
+    font-size: 1rem;
   }
 
   /*        Landing page        */

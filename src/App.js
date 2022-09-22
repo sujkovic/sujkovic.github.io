@@ -12,14 +12,16 @@ function App() {
   const [navOpen, setNavOpen] = useState(false);
 
   useEffect(() => {
-    if (navOpen) {
-      document.querySelector(".nav-projects").style.display = "block";
-      document.querySelector(".nav-contact").style.display = "block";
-      document.querySelector(".nav-about").style.display = "block";
-    } else {
-      document.querySelector(".nav-projects").style.display = "none";
-      document.querySelector(".nav-contact").style.display = "none";
-      document.querySelector(".nav-about").style.display = "none";
+    if (!mobileCheck()) {
+      if (navOpen) {
+        document.querySelector(".nav-projects").style.display = "block";
+        document.querySelector(".nav-contact").style.display = "block";
+        document.querySelector(".nav-about").style.display = "block";
+      } else {
+        document.querySelector(".nav-projects").style.display = "none";
+        document.querySelector(".nav-contact").style.display = "none";
+        document.querySelector(".nav-about").style.display = "none";
+      }
     }
   }, [navOpen]);
 
@@ -45,7 +47,7 @@ function App() {
 
   return (
     <div className="App">
-      <>{mobileCheck() ? <Nav /> : <Header onNavClick={onNavClick} />}</>
+      <>{mobileCheck() ? <></> : <Header onNavClick={onNavClick} />}</>
       <LandingPage mobileCheck={mobileCheck} />
       <About />
       <Projects />
